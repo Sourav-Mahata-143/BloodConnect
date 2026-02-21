@@ -6,7 +6,7 @@
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active_Development-success?style=for-the-badge)
 
-### 🚀 [View Live Preview Here](https://your-website-link-here.com)
+### 🚀 [View Live Preview Here]((https://sourav-mahata-143.github.io/BloodConnect/)
 
 ---
 
@@ -39,7 +39,7 @@ This project is designed to be lightweight and fast, utilizing modern frontend t
 
 ## 🚀 Getting Started
 
-Want to see it in action without downloading? **[Click here for the Live Demo](https://your-website-link-here.com)**.
+Want to see it in action without downloading? **[Click here for the Live Demo](https://sourav-mahata-143.github.io/BloodConnect/)**.
 
 If you'd like to run this static frontend project locally, it is incredibly simple. No build steps or package managers are required for this current version.
 
