@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Webcrumbs Plugin</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+      @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+      @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined);
+    </style>
+  </head>
+  <body>
+    <div id="webcrumbs">
+      <div class="min-h-screen bg-gray-50 font-sans">
+        <header class="bg-white shadow-md">
+          <div
+            class="container mx-auto px-4 py-4 flex justify-between items-center"
+          >
+            <div class="flex items-center space-x-2">
+              <span class="material-symbols-outlined text-red-600 text-3xl"
+                >bloodtype</span
+              >
+              <h1 class="text-2xl font-bold text-gray-800">BloodConnect</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-red-600 transition-colors duration-300"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 hover:text-red-600 transition-colors duration-300"
+                >Find Donors</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 hover:text-red-600 transition-colors duration-300"
+                >About</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 hover:text-red-600 transition-colors duration-300"
+                >FAQ</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 hover:text-red-600 transition-colors duration-300"
+                >Contact</a
+              >
+            </nav>
+            <div class="flex items-center space-x-4">
+              <button
+                class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
+              >
+                Login
+              </button>
+              <button
+                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
+              >
+                Become a Donor
+              </button>
+              <button class="md:hidden text-gray-600">
+                <span class="material-symbols-outlined">menu</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <section class="bg-gradient-to-r from-red-50 to-red-100 py-16">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                  Donate Blood, <span class="text-red-600">Save Lives</span>
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                  Connect with blood donors in your area when you need it most.
+                  Your contribution can save lives.
+                </p>
+                <div
+                  class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+                >
+                  <button
+                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  >
+                    <span class="material-symbols-outlined mr-2">search</span>
+                    Find a Donor
+                  </button>
+                  <button
+                    class="bg-white hover:bg-gray-100 text-red-600 border border-red-600 px-6 py-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  >
+                    <span class="material-symbols-outlined mr-2"
+                      >volunteer_activism</span
+                    >
+                    Register as Donor
+                  </button>
+                </div>
+              </div>
+              <div class="md:w-1/2">
+                <img
+                  src="https://images.unsplash.com/photo-1615461066159-fea0960485d5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxibG9vZCUyMGRvbmF0aW9ufGVufDB8fHx8MTc1ODM5NjY4OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                  alt="Blood donation illustration"
+                  class="rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105"
+                  keywords="blood donation, healthcare, medical, donate blood"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 bg-white">
+          <div class="container mx-auto px-4">
+            <div
+              class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 -mt-20 relative z-10 border border-gray-100"
+            >
+              <h3 class="text-2xl font-bold text-center mb-6">
+                Find Blood Donors
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="relative">
+                  <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+                    >bloodtype</span
+                  >
+                  <select
+                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-300 appearance-none bg-white"
+                  >
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                  <span
+                    class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"
+                    >expand_more</span
+                  >
+                </div>
+                <div class="relative">
+                  <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+                    >location_on</span
+                  >
+                  <input
+                    type="text"
+                    placeholder="Enter your city"
+                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-300"
+                  />
+                </div>
+                <button
+                  class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined mr-2">search</span>
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                Rare Blood Groups
+              </h2>
+              <p class="text-gray-600 max-w-2xl mx-auto">
+                These blood types are critically needed as they are rare and
+                often in short supply. If you have one of these blood types,
+                your donation is especially valuable.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg border-t-4 border-red-600 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">AB-</h3>
+                    <span
+                      class="bg-red-100 text-red-600 text-sm px-3 py-1 rounded-full font-semibold"
+                      >Very Rare</span
+                    >
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    Less than 1% of the population has AB- blood type, making it
+                    one of the rarest blood groups.
+                  </p>
+                  <div class="flex items-center text-gray-500 mb-2">
+                    <span class="material-symbols-outlined mr-2 text-red-500"
+                      >person</span
+                    >
+                    <p>Can donate to: AB- only</p>
+                  </div>
+                  <div class="flex items-center text-gray-500">
+                    <span class="material-symbols-outlined mr-2 text-green-500"
+                      >person</span
+                    >
+                    <p>Can receive from: All negative types</p>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-4">
+                  <button
+                    class="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
+                  >
+                    Find AB- Donors
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg border-t-4 border-red-600 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">B-</h3>
+                    <span
+                      class="bg-red-100 text-red-600 text-sm px-3 py-1 rounded-full font-semibold"
+                      >Rare</span
+                    >
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    Only about 1.5% of the population has B- blood type, making
+                    it a rare and valuable blood group.
+                  </p>
+                  <div class="flex items-center text-gray-500 mb-2">
+                    <span class="material-symbols-outlined mr-2 text-red-500"
+                      >person</span
+                    >
+                    <p>Can donate to: B-, AB-</p>
+                  </div>
+                  <div class="flex items-center text-gray-500">
+                    <span class="material-symbols-outlined mr-2 text-green-500"
+                      >person</span
+                    >
+                    <p>Can receive from: B-, O-</p>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-4">
+                  <button
+                    class="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
+                  >
+                    Find B- Donors
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg border-t-4 border-red-600 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">A-</h3>
+                    <span
+                      class="bg-red-100 text-red-600 text-sm px-3 py-1 rounded-full font-semibold"
+                      >Uncommon</span
+                    >
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    About 6% of the population has A- blood type, making it
+                    relatively uncommon.
+                  </p>
+                  <div class="flex items-center text-gray-500 mb-2">
+                    <span class="material-symbols-outlined mr-2 text-red-500"
+                      >person</span
+                    >
+                    <p>Can donate to: A-, AB-</p>
+                  </div>
+                  <div class="flex items-center text-gray-500">
+                    <span class="material-symbols-outlined mr-2 text-green-500"
+                      >person</span
+                    >
+                    <p>Can receive from: A-, O-</p>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-4">
+                  <button
+                    class="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
+                  >
+                    Find A- Donors
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg border-t-4 border-red-600 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">O-</h3>
+                    <span
+                      class="bg-orange-100 text-orange-600 text-sm px-3 py-1 rounded-full font-semibold"
+                      >Universal Donor</span
+                    >
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    Only 7% of people have O- blood. It&#x27;s the universal
+                    donor type that can be given to anyone.
+                  </p>
+                  <div class="flex items-center text-gray-500 mb-2">
+                    <span class="material-symbols-outlined mr-2 text-red-500"
+                      >person</span
+                    >
+                    <p>Can donate to: All blood types</p>
+                  </div>
+                  <div class="flex items-center text-gray-500">
+                    <span class="material-symbols-outlined mr-2 text-green-500"
+                      >person</span
+                    >
+                    <p>Can receive from: O- only</p>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-4">
+                  <button
+                    class="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
+                  >
+                    Find O- Donors
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 bg-white">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                How BloodConnect Works
+              </h2>
+              <p class="text-gray-600 max-w-2xl mx-auto">
+                Our platform connects blood donors with people in need, ensuring
+                privacy and safety for everyone involved.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:scale-105"
+              >
+                <div
+                  class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+                >
+                  <span class="material-symbols-outlined text-red-600 text-2xl"
+                    >app_registration</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">
+                  Register as a Donor
+                </h3>
+                <p class="text-gray-600 text-center">
+                  Create your profile and upload your verified blood group
+                  certificate to join our donor community.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:scale-105"
+              >
+                <div
+                  class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+                >
+                  <span class="material-symbols-outlined text-red-600 text-2xl"
+                    >search</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">
+                  Search for Donors
+                </h3>
+                <p class="text-gray-600 text-center">
+                  Find donors matching your required blood group and location
+                  using our simple search tool.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:scale-105"
+              >
+                <div
+                  class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+                >
+                  <span class="material-symbols-outlined text-red-600 text-2xl"
+                    >contact_phone</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">
+                  Connect Safely
+                </h3>
+                <p class="text-gray-600 text-center">
+                  Request contact with donors through our secure platform that
+                  protects personal information.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                Success Stories
+              </h2>
+              <p class="text-gray-600 max-w-2xl mx-auto">
+                Real stories from people who found donors through our platform
+                when they needed it most.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:scale-105"
+              >
+                <div class="flex items-center mb-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHx3b21hbnxlbnwwfHx8fDE3NTgzOTY2ODl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                    alt="Sarah Johnson"
+                    class="w-12 h-12 rounded-full mr-4"
+                    keywords="woman, testimonial, profile picture"
+                  />
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-800">
+                      Sarah Johnson
+                    </h4>
+                    <p class="text-gray-500">Found B- donor for her mother</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  &quot;When my mother needed an emergency transfusion, I
+                  couldn&#x27;t find a B- donor anywhere. BloodConnect helped me
+                  find three donors within hours. You literally saved my
+                  mother&#x27;s life.&quot;
+                </p>
+                <div class="mt-4 flex">
+                  <span class="text-yellow-400">★★★★★</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:scale-105"
+              >
+                <div class="flex items-center mb-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxtYW58ZW58MHx8fHwxNzU4Mzk2NzAyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                    alt="Michael Chen"
+                    class="w-12 h-12 rounded-full mr-4"
+                    keywords="man, testimonial, profile picture"
+                  />
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-800">
+                      Michael Chen
+                    </h4>
+                    <p class="text-gray-500">Regular O- donor</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  &quot;I&#x27;ve been donating blood for years, but
+                  BloodConnect has made it meaningful by connecting me directly
+                  with people who need my rare blood type. I&#x27;ve donated 7
+                  times through this platform!&quot;
+                </p>
+                <div class="mt-4 flex">
+                  <span class="text-yellow-400">★★★★★</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:scale-105"
+              >
+                <div class="flex items-center mb-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwyfHx3b21hbnxlbnwwfHx8fDE3NTgzOTY2ODl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                    alt="Priya Sharma"
+                    class="w-12 h-12 rounded-full mr-4"
+                    keywords="woman, testimonial, profile picture"
+                  />
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-800">
+                      Priya Sharma
+                    </h4>
+                    <p class="text-gray-500">Found AB+ donor for surgery</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  &quot;I was scheduled for surgery and needed AB+ blood. The
+                  hospital was running low, but through BloodConnect I found
+                  donors quickly. I appreciated how the platform protected
+                  everyone&#x27;s privacy too.&quot;
+                </p>
+                <div class="mt-4 flex">
+                  <span class="text-yellow-400">★★★★★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 bg-gradient-to-r from-red-600 to-red-700">
+          <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">
+              Become a Donor Today
+            </h2>
+            <p class="text-white text-lg mb-8 max-w-2xl mx-auto">
+              Your blood donation can save up to three lives. Join our community
+              of donors and make a difference when it matters most.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <button
+                class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center mx-auto sm:mx-0"
+              >
+                <span class="material-symbols-outlined mr-2">how_to_reg</span>
+                Register as Donor
+              </button>
+              <button
+                class="bg-transparent hover:bg-red-800 text-white border border-white px-8 py-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center mx-auto sm:mx-0"
+              >
+                <span class="material-symbols-outlined mr-2">info</span> Learn
+                More
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 bg-white">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p class="text-gray-600 max-w-2xl mx-auto">
+                Find answers to common questions about blood donation and using
+                our platform.
+              </p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+              <details
+                class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg group"
+              >
+                <summary
+                  class="px-6 py-4 flex justify-between items-center cursor-pointer text-gray-800 font-semibold"
+                >
+                  Who can donate blood?
+                  <span
+                    class="material-symbols-outlined transform group-open:rotate-180 transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="px-6 py-4 border-t border-gray-100 text-gray-600">
+                  <p>Generally, you can donate blood if you:</p>
+                  <ul class="list-disc pl-6 mt-2 space-y-1">
+                    <li>Are at least 18 years old</li>
+                    <li>Weigh at least 50 kg</li>
+                    <li>Are in good health</li>
+                    <li>Haven&#x27;t donated blood in the last 3 months</li>
+                  </ul>
+                  <p class="mt-2">
+                    Some medical conditions and medications may disqualify you
+                    from donating. Check with your healthcare provider if
+                    you&#x27;re unsure.
+                  </p>
+                </div>
+              </details>
+              <details
+                class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg group"
+              >
+                <summary
+                  class="px-6 py-4 flex justify-between items-center cursor-pointer text-gray-800 font-semibold"
+                >
+                  How does BloodConnect protect my privacy?
+                  <span
+                    class="material-symbols-outlined transform group-open:rotate-180 transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="px-6 py-4 border-t border-gray-100 text-gray-600">
+                  <p>
+                    We take privacy seriously. When someone needs to contact a
+                    donor:
+                  </p>
+                  <ul class="list-disc pl-6 mt-2 space-y-2">
+                    <li>They submit a request through our platform</li>
+                    <li>We notify the donor about the request</li>
+                    <li>The donor can choose to accept or decline</li>
+                    <li>
+                      If accepted, we facilitate communication without sharing
+                      direct contact information initially
+                    </li>
+                    <li>
+                      Both parties can choose to share more details directly if
+                      they wish
+                    </li>
+                  </ul>
+                  <p class="mt-2">
+                    Your personal information is encrypted and never shared
+                    without your explicit consent.
+                  </p>
+                </div>
+              </details>
+              <details
+                class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg group"
+              >
+                <summary
+                  class="px-6 py-4 flex justify-between items-center cursor-pointer text-gray-800 font-semibold"
+                >
+                  How do I verify my blood group?
+                  <span
+                    class="material-symbols-outlined transform group-open:rotate-180 transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="px-6 py-4 border-t border-gray-100 text-gray-600">
+                  <p>To verify your blood group on our platform:</p>
+                  <ul class="list-disc pl-6 mt-2 space-y-2">
+                    <li>
+                      Upload a recent blood test report from a recognized
+                      laboratory
+                    </li>
+                    <li>
+                      Or upload a donor card from a blood bank or hospital
+                    </li>
+                    <li>
+                      Or upload a certificate from a registered medical
+                      professional
+                    </li>
+                  </ul>
+                  <p class="mt-2">
+                    Our team will review the document and verify your blood
+                    group within 24-48 hours.
+                  </p>
+                </div>
+              </details>
+              <details
+                class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg group"
+              >
+                <summary
+                  class="px-6 py-4 flex justify-between items-center cursor-pointer text-gray-800 font-semibold"
+                >
+                  Is there a fee for using BloodConnect?
+                  <span
+                    class="material-symbols-outlined transform group-open:rotate-180 transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="px-6 py-4 border-t border-gray-100 text-gray-600">
+                  <p>
+                    No, BloodConnect is completely free for both donors and
+                    recipients. Our mission is to save lives by connecting
+                    people who need blood with willing donors, without any
+                    financial barriers.
+                  </p>
+                  <p class="mt-2">
+                    We are supported by grants and donations to maintain our
+                    platform and services.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                  Get the BloodConnect App
+                </h2>
+                <p class="text-gray-600 mb-6">
+                  Download our mobile app for easier access to donors. Receive
+                  notifications when your blood type is urgently needed in your
+                  area.
+                </p>
+                <div
+                  class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+                >
+                  <button
+                    class="bg-black hover:bg-gray-900 text-white px-6 py-3 rounded-lg shadow transition-all duration-300 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 mr-2"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M17.5234 12.0494C17.5186 11.1681 17.7413 10.3034 18.1629 9.55048C18.5844 8.79752 19.1887 8.18277 19.9096 7.77638C19.491 7.16477 18.9388 6.66078 18.2981 6.30868C17.6573 5.95657 16.9475 5.76491 16.2242 5.75182C14.7156 5.59326 13.2523 6.6016 12.4851 6.6016C11.7021 6.6016 10.5035 5.77404 9.24326 5.80182C8.3918 5.82134 7.5614 6.04313 6.82276 6.44648C6.08413 6.84984 5.46584 7.42108 5.02735 8.10604C3.63197 10.565 4.66112 14.1861 6.00149 16.2072C6.67502 17.1935 7.46502 18.2935 8.50188 18.2494C9.51126 18.2016 9.91985 17.6044 11.1416 17.6044C12.348 17.6044 12.7342 18.2494 13.7935 18.2216C14.8875 18.2016 15.5638 17.2322 16.212 16.2378C16.715 15.5024 17.0874 14.6884 17.3122 13.8305C16.4302 13.428 15.7042 12.7621 15.2467 11.9306C14.7892 11.0992 14.6232 10.1445 14.7726 9.21815C15.614 9.29479 16.3996 9.68218 16.9849 10.3075C17.5703 10.9329 17.9195 11.7573 17.9694 12.6266C17.9694 12.6284 17.5234 12.0656 17.5234 12.0494Z"
+                      ></path>
+                      <path
+                        d="M14.0625 4.62717C14.6652 3.90328 14.9412 2.9707 14.8283 2.04053C13.9282 2.1676 13.1034 2.58216 12.4855 3.2207C12.1873 3.52615 11.9538 3.89064 11.799 4.29165C11.6443 4.69267 11.5714 5.12139 11.5847 5.55233C12.0275 5.55878 12.4653 5.4707 12.8684 5.29353C13.2714 5.11636 13.6297 4.85477 13.9205 4.52776L14.0625 4.62717Z"
+                      ></path>
+                    </svg>
+                    App Store
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+          name: "Bluewave",
+          fontFamily: {
+            sans: [
+              "Open Sans",
+              "ui-sans-serif",
+              "system-ui",
+              "sans-serif",
+              '"Apple Color Emoji"',
+              '"Segoe UI Emoji"',
+              '"Segoe UI Symbol"',
+              '"Noto Color Emoji"',
+            ],
+          },
+          extend: {
+            fontFamily: {
+              title: [
+                "Lato",
+                "ui-sans-serif",
+                "system-ui",
+                "sans-serif",
+                '"Apple Color Emoji"',
+                '"Segoe UI Emoji"',
+                '"Segoe UI Symbol"',
+                '"Noto Color Emoji"',
+              ],
+              body: [
+                "Open Sans",
+                "ui-sans-serif",
+                "system-ui",
+                "sans-serif",
+                '"Apple Color Emoji"',
+                '"Segoe UI Emoji"',
+                '"Segoe UI Symbol"',
+                '"Noto Color Emoji"',
+              ],
+            },
+            colors: {
+              neutral: {
+                50: "#f7f7f7",
+                100: "#eeeeee",
+                200: "#e0e0e0",
+                300: "#cacaca",
+                400: "#b1b1b1",
+                500: "#999999",
+                600: "#7f7f7f",
+                700: "#676767",
+                800: "#545454",
+                900: "#464646",
+                950: "#282828",
+              },
+              primary: {
+                50: "#f3f1ff",
+                100: "#e9e5ff",
+                200: "#d5cfff",
+                300: "#b7a9ff",
+                400: "#9478ff",
+                500: "#7341ff",
+                600: "#631bff",
+                700: "#611bf8",
+                800: "#4607d0",
+                900: "#3c08aa",
+                950: "#220174",
+                DEFAULT: "#611bf8",
+              },
+            },
+          },
+          fontSize: {
+            xs: ["12px", { lineHeight: "19.200000000000003px" }],
+            sm: ["14px", { lineHeight: "21px" }],
+            base: ["16px", { lineHeight: "25.6px" }],
+            lg: ["18px", { lineHeight: "27px" }],
+            xl: ["20px", { lineHeight: "28px" }],
+            "2xl": ["24px", { lineHeight: "31.200000000000003px" }],
+            "3xl": ["30px", { lineHeight: "36px" }],
+            "4xl": ["36px", { lineHeight: "41.4px" }],
+            "5xl": ["48px", { lineHeight: "52.800000000000004px" }],
+            "6xl": ["60px", { lineHeight: "66px" }],
+            "7xl": ["72px", { lineHeight: "75.60000000000001px" }],
+            "8xl": ["96px", { lineHeight: "100.80000000000001px" }],
+            "9xl": ["128px", { lineHeight: "134.4px" }],
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "6px",
+            DEFAULT: "12px",
+            md: "18px",
+            lg: "24px",
+            xl: "36px",
+            "2xl": "48px",
+            "3xl": "72px",
+            full: "9999px",
+          },
+          spacing: {
+            0: "0px",
+            1: "4px",
+            2: "8px",
+            3: "12px",
+            4: "16px",
+            5: "20px",
+            6: "24px",
+            7: "28px",
+            8: "32px",
+            9: "36px",
+            10: "40px",
+            11: "44px",
+            12: "48px",
+            14: "56px",
+            16: "64px",
+            20: "80px",
+            24: "96px",
+            28: "112px",
+            32: "128px",
+            36: "144px",
+            40: "160px",
+            44: "176px",
+            48: "192px",
+            52: "208px",
+            56: "224px",
+            60: "240px",
+            64: "256px",
+            72: "288px",
+            80: "320px",
+            96: "384px",
+            px: "1px",
+            0.5: "2px",
+            1.5: "6px",
+            2.5: "10px",
+            3.5: "14px",
+          },
+        },
+        plugins: [],
+        important: "#webcrumbs",
+      };
+    </script>
+  </body>
+</html>
